@@ -1,4 +1,7 @@
-var plugins = []
+var plugins = [{
+      plugin: require('C:/Users/kim/Desktop/js/gatsby pizza/gatsby-pizza/gatsby-ssr'),
+      options: {"plugins":[]},
+    }]
 // During bootstrap, we write requires at top of this file which looks like:
 // var plugins = [
 //   {

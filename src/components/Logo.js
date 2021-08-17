@@ -1,6 +1,6 @@
-import React from 'react';
-import styled from 'styled-components';
-import stripes from '../assets/images/stripes.svg';
+import React from "react";
+import styled from "styled-components";
+import stripes from "../assets/images/stripes.svg";
 
 const LogoStyles = styled.div`
   /* This value controls the entire size of the logo*/
@@ -66,14 +66,14 @@ const LogoStyles = styled.div`
     }
     &.l {
       --rotate: 2deg;
-      --scale: 1.3;
+      --scale: 1.2;
       --translateX: 0.05em;
       --translateY: -0.05em;
     }
     &.i {
-      --scale: 1.1;
-      --translateY: -0.1em;
-      --translateX: 0.1em;
+      --scale: 0.95;
+      --translateY: -0em;
+      --translateX: 0.05em;
     }
     &.c {
       --rotate: 3deg;
@@ -91,7 +91,7 @@ const LogoStyles = styled.div`
     }
     &.s {
       --rotate: 12deg;
-      --scale: 0.9;
+      --scale: 1;
       --translateY: -0.14em;
     }
   }
