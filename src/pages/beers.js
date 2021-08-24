@@ -1,6 +1,7 @@
-import { graphql } from 'gatsby';
-import React from 'react';
-import styled from 'styled-components';
+import { graphql } from "gatsby";
+import React from "react";
+import styled from "styled-components";
+import SEO from "../components/SEO";
 
 const SingleBeerStyles = styled.div`
   border: 1px solid var(--grey);
@@ -26,6 +27,7 @@ export default function BeersPage({ data }) {
   console.log(data.beers.nodes[0]);
   return (
     <div>
+      <SEO title={`Beers! We have ${data.beers.nodes.length} in stock!`} />
       <h2 className="center">
         We have {data.beers.nodes.length} beers available! Dine in only!
       </h2>
@@ -43,7 +45,7 @@ export default function BeersPage({ data }) {
               {beer.price}
               <p title={`${rating} out of 5 stars`}>
                 {`⭐`.repeat(rating)}
-                <span style={{ filter: 'grayscale(100%)' }}>
+                <span style={{ filter: "grayscale(100%)" }}>
                   {`⭐`.repeat(5 - rating)}
                 </span>
                 <span>({beer.rating.reviews})</span>

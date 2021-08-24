@@ -1,8 +1,9 @@
-import { graphql, Link } from 'gatsby';
-import Img from 'gatsby-image';
-import React from 'react';
-import styled from 'styled-components';
-import Pagination from '../components/Pagination';
+import { graphql, Link } from "gatsby";
+import Img from "gatsby-image";
+import React from "react";
+import styled from "styled-components";
+import Pagination from "../components/Pagination";
+import SEO from "../components/SEO";
 
 const SingleSlicemasterStyles = styled.div`
   padding: 2rem;
@@ -35,22 +36,12 @@ const SlicemasterGridStyles = styled.div`
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 2rem;
 `;
-// function SingleSlicemaster({ slicemaster }) {
-//   return (
-//     <SingleSlicemasterStyles>
-//       <Link to={`/slicemaster/${slicemaster.slug.current}`}>
-//         <h2>
-//           <span className="mark">{slicemaster.name}</span>
-//         </h2>
-//       </Link>
-//       <Img fluid={slicemaster.image.asset.fluid} alt={slicemaster.name} />
-//     </SingleSlicemasterStyles>
-//   );
-// }
+
 export default function SlicesmastersPage({ data, pageContext }) {
   const slicemasters = data.slicemasters.nodes;
   return (
     <div>
+      <SEO title={`Slicemasters - Page ${pageContext.currentPage || 1}`} />
       <Pagination
         pageSize={parseInt(process.env.GATSBY_PAGE_SIZE)}
         skip={pageContext.skip}
