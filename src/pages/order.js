@@ -3,6 +3,9 @@ import Img from 'gatsby-image';
 import React, { useState } from 'react';
 import SEO from '../components/SEO';
 import useForm from '../utils/useForm';
+import calculatePizzaPrice from '../utils/calculatePizzaPrice';
+import formatMoney from '../utils/formatMoney';
+import OrderStyles from '../styles/OrderStyles';
 
 export default function OrdersPage({ data }) {
   const pizzas = data.pizzas.nodes;
@@ -14,43 +17,77 @@ export default function OrdersPage({ data }) {
   return (
     <>
       <SEO title="Order a pizza!" />
-      <form>
+      <OrderStyles>
         <fieldset>
           <legend>Your Info</legend>
-          <label htmlFor="name">Name</label>
-          <input
-            type="text"
-            name="name"
-            value={values.name}
-            onChange={updateValue}
-          />
-          <label htmlFor="email">Email</label>
-          <input
-            type="email"
-            name="email"
-            value={values.email}
-            onChange={updateValue}
-          />
+          <label htmlFor="name">
+            Name
+            <input
+              type="text"
+              name="name"
+              value={values.name}
+              onChange={updateValue}
+            />
+          </label>
+          <label htmlFor="email">
+            Email
+            <input
+              type="email"
+              name="email"
+              value={values.email}
+              onChange={updateValue}
+            />
+          </label>
         </fieldset>
-        <fieldset>
+        <fieldset className="menu">
           <legend>Menu</legend>
           {pizzas.map((pizza) => (
             <div key={pizza.id}>
-              <h2>{pizza.name}</h2>
               <Img
                 width="50"
                 height="50"
                 fluid={pizza.image.asset.fluid}
                 alt={pizza.name}
               />
-              <p>{pizza.price} cents</p>
+              <div>
+                <h2>{pizza.name}</h2>
+              </div>
+              <div>
+                {['S', 'M', 'L'].map((size) => (
+                  <button type="button">
+                    {size} {formatMoney(calculatePizzaPrice(pizza.price, size))}
+                  </button>
+                ))}
+              </div>
             </div>
           ))}
         </fieldset>
-        <fieldset>
+        <fieldset className="order">
           <legend>Order</legend>
         </fieldset>
-      </form>
+      </OrderStyles>
     </>
   );
 }
+
+export const query = graphql`
+  query {
+    pizzas: allSanityPizza {
+      nodes {
+        name
+        id
+        slug {
+          current
+        }
+        image {
+          asset {
+            fluid(maxWidth: 100) {
+              ...GatsbySanityImageFluid
+            }
+          }
+        }
+        price
+      }
+    }
+  }
+`;
