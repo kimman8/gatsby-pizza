@@ -8,6 +8,7 @@ const MenuItemStyles = styled.div`
   align-content: center;
   align-items: center;
   border: 1px solid var(--grey);
+  position: relative;
 
   .gatsby-image-wrapper {
     grid-row: span 2;
