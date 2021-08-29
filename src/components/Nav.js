@@ -7,7 +7,6 @@ const NavStyles = styled.nav`
   .logo {
     transform: translateY(-25%);
   }
-  margin-bottom: 3rem;
   ul {
     margin: 0;
     margin-top: -6rem;
