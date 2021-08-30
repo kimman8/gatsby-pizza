@@ -49,7 +49,6 @@ exports.handler = async (event, context) => {
       body: JSON.stringify({ message: 'boop beep bop zzz' }),
     };
   }
-  console.log(body);
   // validate the data coming in is correct
 
   // make sure they actually have items in that order

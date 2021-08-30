@@ -17,7 +17,6 @@ async function turnPizzasIntoPages({ graphql, actions }) {
       }
     }
   `);
-  console.log(data);
   // 3.loop over each pizza and create a page for that pizza
   data.pizzas.nodes.forEach((pizza) => {
     actions.createPage({
@@ -120,13 +119,9 @@ async function turnSlicemastersIntoPages({ graphql, actions }) {
   // 3. figure out how many pages there are based on how many slicemasters there are and how many per page
   const pageSize = parseInt(process.env.GATSBY_PAGE_SIZE);
   const pageCount = Math.ceil(data.slicemasters.totalCount / pageSize);
-  console.log(
-    `There are ${data.slicemasters.totalCount} people and ${pageCount} pages with ${pageSize} per page.`
-  );
 
   // 4. loop from 1 to n and creates the pages for them
   Array.from({ length: pageCount }).forEach((_, i) => {
-    console.log(`creating page ${i}`);
     actions.createPage({
       path: `/slicemasters/${i + 1}`,
       component: path.resolve('./src/pages/slicemasters.js'),
