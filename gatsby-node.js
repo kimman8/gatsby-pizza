@@ -58,36 +58,36 @@ async function turnToppingsIntoPages({ graphql, actions }) {
   // 4. pass topping data to pizza.js
 }
 
-async function fetchBeersAndTurnIntoNodes({
-  actions,
-  createNodeId,
-  createContentDigest,
-}) {
-  // 1. fetch a list of beers
+// async function fetchBeersAndTurnIntoNodes({
+//   actions,
+//   createNodeId,
+//   createContentDigest,
+// }) {
+//   // 1. fetch a list of beers
 
-  const res = await fetch('https://api.sampleapis.com/beers/ale');
-  const beers = await res.json();
-  // 2. loop over each one
-  for (const beer of beers) {
-    if (!beer.name) return;
-    // create a node for each beer
-    const nodeMeta = {
-      id: createNodeId(`beer-${beer.name}`),
-      parent: null,
-      children: [],
-      internal: {
-        type: 'Beer',
-        mediaType: 'application/json',
-        contentDigest: createContentDigest(beer),
-      },
-    };
-    // 3. create a node for that beer
-    actions.createNode({
-      ...beer,
-      ...nodeMeta,
-    });
-  }
-}
+//   const res = await fetch('https://api.sampleapis.com/beers/ale');
+//   const beers = await res.json();
+//   // 2. loop over each one
+//   for (const beer of beers) {
+//     if (!beer.name) return;
+//     // create a node for each beer
+//     const nodeMeta = {
+//       id: createNodeId(`beer-${beer.name}`),
+//       parent: null,
+//       children: [],
+//       internal: {
+//         type: 'Beer',
+//         mediaType: 'application/json',
+//         contentDigest: createContentDigest(beer),
+//       },
+//     };
+//     // 3. create a node for that beer
+//     actions.createNode({
+//       ...beer,
+//       ...nodeMeta,
+//     });
+//   }
+// }
 
 async function turnSlicemastersIntoPages({ graphql, actions }) {
   // 1. query all slicemasters
@@ -134,10 +134,10 @@ async function turnSlicemastersIntoPages({ graphql, actions }) {
   });
 }
 
-export async function sourceNodes(params) {
-  // fetch a list of beers and source them into our gatsby api
-  await Promise.all[fetchBeersAndTurnIntoNodes(params)];
-}
+// export async function sourceNodes(params) {
+//   // fetch a list of beers and source them into our gatsby api
+//   await Promise.all[fetchBeersAndTurnIntoNodes(params)];
+// }
 export async function createPages(params) {
   // create pages dynamically
   // await for all promises to be resolved before finishing this function
