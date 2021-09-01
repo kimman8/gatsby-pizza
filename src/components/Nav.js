@@ -6,6 +6,7 @@ import Logo from './Logo';
 const NavStyles = styled.nav`
   .logo {
     transform: translateY(-25%);
+    background: pink;
   }
   ul {
     margin: 0;
@@ -39,12 +40,33 @@ const NavStyles = styled.nav`
   a {
     font-size: 3rem;
     text-decoration: none;
+    display: block;
     &:hover {
       color: var(--red);
+    }
+    @media (max-width: 800px) {
+      font-size: 2rem;
     }
     // &[aria-current'page'] {
     //   color: var(--red);
     // }
+  }
+  @media (max-width: 600px) {
+    --columns: 4;
+    ul {
+      grid-template-rows: auto auto;
+      grid-template-columns: repeat(var(--columns), 1fr);
+      justify-items: center;
+    }
+    .logo-item {
+      background: tomato;
+      order: 0;
+      grid-column: 1/-1;
+    }
+    .logo {
+      transform: none;
+      background: blue;
+    }
   }
 `;
 
@@ -57,7 +79,7 @@ const Nav = () => (
       <li>
         <Link to="/pizzas">Menu</Link>
       </li>
-      <li>
+      <li className="logo-item">
         <Link to="/">
           <Logo />
         </Link>

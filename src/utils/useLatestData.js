@@ -26,7 +26,6 @@ export default function useLatestData() {
   // or you can make VS CODE see the graphql as HTML for the highlighting and formatting by using the below..
   // const gql = String.raw;
   useEffect(function () {
-    console.log('fetchin DATA!~');
     // when the component loads, fetch the data
     fetch(process.env.GATSBY_GRAPHQL_ENDPOINT, {
       method: 'POST',
@@ -57,8 +56,7 @@ export default function useLatestData() {
         setSlicemasters(res.data.StoreSettings.slicemaster);
       })
       .catch((err) => {
-        console.log('SHIIIIEEEET NIGGA!!!!');
-        console.log(err);
+        // console.log('SHIIIIEEEET NIGGA!!!!');
       });
   }, []);
   return {

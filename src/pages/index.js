@@ -21,7 +21,6 @@ function CurrentlySlicing({ slicemasters }) {
 }
 
 function HotSlices({ hotSlices }) {
-  console.log(hotSlices);
   return (
     <div>
       <h2 className="center">

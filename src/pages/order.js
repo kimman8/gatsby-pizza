@@ -32,8 +32,6 @@ export default function OrdersPage({ data }) {
     values,
   });
 
-  console.log({ values, updateValue });
-  console.log(order);
   if (message) {
     return <p>{message}</p>;
   }

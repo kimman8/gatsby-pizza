@@ -1,9 +1,9 @@
-import { graphql, Link } from "gatsby";
-import Img from "gatsby-image";
-import React from "react";
-import styled from "styled-components";
-import Pagination from "../components/Pagination";
-import SEO from "../components/SEO";
+import { graphql, Link } from 'gatsby';
+import Img from 'gatsby-image';
+import React from 'react';
+import styled from 'styled-components';
+import Pagination from '../components/Pagination';
+import SEO from '../components/SEO';
 
 const SingleSlicemasterStyles = styled.div`
   padding: 2rem;
@@ -51,7 +51,7 @@ export default function SlicesmastersPage({ data, pageContext }) {
       />
       <SlicemasterGridStyles>
         {slicemasters.map((slicemaster) => (
-          <SingleSlicemasterStyles>
+          <SingleSlicemasterStyles key={slicemaster.id}>
             <Link
               to={`slicemaster/${slicemaster.slug.current}`}
               key={slicemaster.id}
