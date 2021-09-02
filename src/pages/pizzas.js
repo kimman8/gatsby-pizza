@@ -1,12 +1,11 @@
-import { graphql } from "gatsby";
-import React from "react";
-import PizzaList from "../components/PizzaList";
-import SEO from "../components/SEO";
-import ToppingsFilter from "../components/ToppingsFilter";
+import { graphql } from 'gatsby';
+import React from 'react';
+import PizzaList from '../components/PizzaList';
+import SEO from '../components/SEO';
+import ToppingsFilter from '../components/ToppingsFilter';
 
 export default function PizzasPage({ data, pageContext }) {
   const pizzas = data.pizzas.nodes;
-  console.log(pizzas);
   return (
     <>
       <SEO
