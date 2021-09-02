@@ -1,6 +1,6 @@
-import { createGlobalStyle } from 'styled-components';
-import bg from '../assets/images/bg.svg';
-import stripes from '../assets/images/stripes.svg';
+import { createGlobalStyle } from "styled-components";
+import bg from "../assets/images/bg.svg";
+import stripes from "../assets/images/stripes.svg";
 
 const GlobalStyles = createGlobalStyle`
   :root {
@@ -30,13 +30,17 @@ const GlobalStyles = createGlobalStyle`
     background: var(--red);
     color: white;
     border: 0;
-    padding: 0.6rem 1rem;
+    padding: 0.5rem 0.9rem;
     border-radius: 2px;
     cursor: pointer;
     --cast: 2px;
     box-shadow: var(--cast) var(--cast) 0 var(--grey);
     text-shadow: 0.5px 0.5px 0 rgba(0,0,0,0.2);
     transition: all 0.2s;
+    @media (max-width:500px){
+    padding: 0.4rem 0.8rem;
+
+    }
     &:hover {
       --cast: 4px;
     }

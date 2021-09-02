@@ -1,13 +1,13 @@
-import React from 'react';
-import { Link } from 'gatsby';
-import styled from 'styled-components';
-import Logo from './Logo';
+import React from "react";
+import { Link } from "gatsby";
+import styled from "styled-components";
+import Logo from "./Logo";
 
 const NavStyles = styled.nav`
   .logo {
     transform: translateY(-25%);
-    background: pink;
   }
+
   ul {
     margin: 0;
     margin-top: -6rem;
@@ -23,6 +23,7 @@ const NavStyles = styled.nav`
     transform: rotate(var(--rotate));
     order: 1;
     transition: 0.2s ease-in-out;
+    margin-bottom: 2rem;
 
     &:nth-child(1) {
       --rotate: 1deg;
@@ -53,6 +54,9 @@ const NavStyles = styled.nav`
   }
   @media (max-width: 600px) {
     --columns: 4;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid var(--grey);
+    padding-bottom: 2rem;
     ul {
       grid-template-rows: auto auto;
       grid-template-columns: repeat(var(--columns), 1fr);
@@ -65,8 +69,10 @@ const NavStyles = styled.nav`
     }
     .logo {
       transform: none;
-      background: blue;
     }
+  }
+  @media (max-width: 500px) {
+    --columns: 2;
   }
 `;
 
