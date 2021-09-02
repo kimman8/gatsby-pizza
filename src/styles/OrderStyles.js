@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 const OrderStyles = styled.form`
   display: grid;
@@ -14,6 +14,7 @@ const OrderStyles = styled.form`
     &.order,
     &.menu {
       grid-column: span 1;
+      font-size: clamp(1.5rem, 1.6vw, 1.9rem);
     }
   }
   .mapleSyrup {
