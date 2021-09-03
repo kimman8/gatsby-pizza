@@ -29,6 +29,9 @@ const MenuItemStyles = styled.div`
   } */
   button + button {
     margin-left: 1rem;
+    @media (max-width: 600px) {
+      margin-left: 0.5rem;
+    }
   }
   h2 {
     margin: 0;

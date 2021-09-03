@@ -1,6 +1,6 @@
-import { Link } from "gatsby";
-import React from "react";
-import styled from "styled-components";
+import { Link } from 'gatsby';
+import React from 'react';
+import styled from 'styled-components';
 
 const PaginationStyles = styled.div`
   display: flex;
@@ -57,9 +57,9 @@ export default function Pagination({
       </Link>
       {Array.from({ length: totalPages }).map((_, i) => (
         <Link
-          to={`${base}/${i > 0 ? i + 1 : ""}`}
+          to={`${base}/${i > 0 ? i + 1 : ''}`}
           key={`page-${i}`}
-          className={i === 0 && currentPage === 1 ? "current" : ""}
+          className={i === 0 && currentPage === 1 ? 'current' : ''}
         >
           {i + 1}
         </Link>
