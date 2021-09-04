@@ -23,9 +23,13 @@ const PizzaStyles = styled.div`
   p {
     margin: 0;
   }
+  a {
+    text-decoration: none;
+  }
 `;
 
 function SinglePizza({ pizza }) {
+  console.log(pizza);
   return (
     <PizzaStyles>
       <Link to={`/pizza/${pizza.slug.current}`}>
@@ -33,7 +37,8 @@ function SinglePizza({ pizza }) {
           <span className="mark">{pizza.name}</span>
         </h2>
       </Link>
-      <p>{pizza.toppings.map((topping) => topping.name).join(', ')}</p>
+      {/* <p>{pizza.toppings.map((topping) => topping.name).join(', ')}</p> */}
+      <p>{pizza.description}</p>
       <Img fluid={pizza.image.asset.fluid} alt={pizza.name} />
     </PizzaStyles>
   );

@@ -131,6 +131,7 @@ export const query = graphql`
           current
         }
         price
+        description
         image {
           asset {
             fluid(maxWidth: 100) {

@@ -10,6 +10,7 @@ async function turnPizzasIntoPages({ graphql, actions }) {
       pizzas: allSanityPizza {
         nodes {
           name
+          description
           slug {
             current
           }

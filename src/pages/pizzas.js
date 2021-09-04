@@ -29,6 +29,7 @@ export const query = graphql`
       nodes {
         name
         id
+        description
         slug {
           current
         }
@@ -36,6 +37,7 @@ export const query = graphql`
           id
           name
         }
+        price
         image {
           asset {
             fluid(maxWidth: 400) {
