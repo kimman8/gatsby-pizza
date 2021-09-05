@@ -82,7 +82,7 @@ export default function OrdersPage({ data }) {
                 <h2>{pizza.name}</h2>
               </div>
               <div className="butty">
-                {['S', 'M', 'L'].map((size, index) => (
+                {['S', 'L'].map((size, index) => (
                   <button
                     type="button"
                     key={index}

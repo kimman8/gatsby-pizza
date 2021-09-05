@@ -11,6 +11,7 @@ async function turnPizzasIntoPages({ graphql, actions }) {
         nodes {
           name
           description
+          entree
           slug {
             current
           }
@@ -33,7 +34,7 @@ async function turnPizzasIntoPages({ graphql, actions }) {
 
 async function turnToppingsIntoPages({ graphql, actions }) {
   // 1. get the template
-  const toppingTemplate = path.resolve('./src/pages/pizzas.js');
+  const toppingTemplate = path.resolve('./src/pages/menu.js');
   // 2. query all the toppings
   const { data } = await graphql(`
     query {

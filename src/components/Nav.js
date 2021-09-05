@@ -1,7 +1,7 @@
-import React from "react";
-import { Link } from "gatsby";
-import styled from "styled-components";
-import Logo from "./Logo";
+import React from 'react';
+import { Link } from 'gatsby';
+import styled from 'styled-components';
+import Logo from './Logo';
 
 const NavStyles = styled.nav`
   .logo {
@@ -52,7 +52,7 @@ const NavStyles = styled.nav`
     //   color: var(--red);
     // }
   }
-  @media (max-width: 600px) {
+  @media (max-width: 700px) {
     --columns: 4;
     margin-bottom: 1rem;
     border-bottom: 2px solid var(--grey);
@@ -71,7 +71,7 @@ const NavStyles = styled.nav`
       transform: none;
     }
   }
-  @media (max-width: 500px) {
+  @media (max-width: 600px) {
     --columns: 2;
   }
 `;
@@ -80,21 +80,21 @@ const Nav = () => (
   <NavStyles>
     <ul>
       <li>
-        <Link to="/">Hot Now</Link>
+        <Link to="/gallery">Gallery</Link>
       </li>
       <li>
-        <Link to="/pizzas">Menu</Link>
+        <Link to="/menu">Menu</Link>
       </li>
       <li className="logo-item">
-        <Link to="/">
+        <Link to="/menu">
           <Logo />
         </Link>
       </li>
       <li>
-        <Link to="/slicemasters">SliceMasters</Link>
+        <Link to="/lunch">Lunch Special</Link>
       </li>
       <li>
-        <Link to="/order">Order Ahead!</Link>
+        <Link to="/contact">Contact Us</Link>
       </li>
     </ul>
   </NavStyles>

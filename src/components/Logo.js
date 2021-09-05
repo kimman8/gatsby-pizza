@@ -24,7 +24,7 @@ const LogoStyles = styled.div`
     align-content: center;
   }
   .est {
-    font-size: 1.5em;
+    font-size: 2.3em;
     align-self: center;
   }
   h1 {
@@ -68,7 +68,7 @@ const LogoStyles = styled.div`
     &.l {
       --rotate: 2deg;
       --scale: 1.2;
-      --translateX: 0.05em;
+      --translateX: 0.01em;
       --translateY: -0.05em;
     }
     &.i {

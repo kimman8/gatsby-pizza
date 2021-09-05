@@ -1,6 +1,6 @@
-import { graphql, useStaticQuery } from "gatsby";
-import React from "react";
-import { Helmet } from "react-helmet";
+import { graphql, useStaticQuery } from 'gatsby';
+import React from 'react';
+import { Helmet } from 'react-helmet';
 
 export default function SEO({ children, location, title, image, description }) {
   const { site } = useStaticQuery(graphql`
@@ -27,7 +27,7 @@ export default function SEO({ children, location, title, image, description }) {
       <meta name="description" content={site.siteMetadata.description} />
       {/* open graph */}
       {location && <meta property="og:url" content={location.href} />}
-      <meta property="og:image" content={image || `/logo.svg`} />
+      <meta property="og:image" content={image || `/asian_food_.png`} />
       <meta property="og:title" content={title} key="ogtitle" />
       <meta
         property="og:site_name"

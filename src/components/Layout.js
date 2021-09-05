@@ -1,11 +1,11 @@
-import React from "react";
-import styled from "styled-components";
-import "normalize.css";
-import Typography from "../styles/Typography";
-import Footer from "./Footer";
-import GlobalStyles from "../styles/GlobalStyles";
-import Nav from "./Nav";
-import stripes from "../assets/images/stripes.svg";
+import React from 'react';
+import styled from 'styled-components';
+import 'normalize.css';
+import Typography from '../styles/Typography';
+import Footer from './Footer';
+import GlobalStyles from '../styles/GlobalStyles';
+import Nav from './Nav';
+import stripes from '../assets/images/stripes.svg';
 
 const SiteBorderStyles = styled.div`
   max-width: 1000px;

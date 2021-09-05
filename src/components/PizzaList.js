@@ -2,6 +2,8 @@ import { Link } from 'gatsby';
 import Img from 'gatsby-image';
 import React from 'react';
 import styled from 'styled-components';
+import calculatePizzaPrice from '../utils/calculatePizzaPrice';
+import formatMoney from '../utils/formatMoney';
 
 const PizzaGridStyles = styled.div`
   display: grid;
@@ -11,6 +13,7 @@ const PizzaGridStyles = styled.div`
 `;
 
 const PizzaStyles = styled.div`
+  position: relative;
   display: grid;
   /*take your template row sizing not from PizzaStyles but from PizzaGridStyles*/
   @supports not (grid-template-rows: subgrid) {
@@ -26,6 +29,10 @@ const PizzaStyles = styled.div`
   a {
     text-decoration: none;
   }
+  button {
+    cursor: default;
+    transform: rotate(-2deg) translateY(-30px);
+  }
 `;
 
 function SinglePizza({ pizza }) {
@@ -40,6 +47,17 @@ function SinglePizza({ pizza }) {
       {/* <p>{pizza.toppings.map((topping) => topping.name).join(', ')}</p> */}
       <p>{pizza.description}</p>
       <Img fluid={pizza.image.asset.fluid} alt={pizza.name} />
+      <div>
+        {pizza.entree ? (
+          <button type="button">{formatMoney(pizza.price)} ea</button>
+        ) : (
+          ['S', 'L'].map((size, index) => (
+            <button type="button" key={index}>
+              {size} {formatMoney(calculatePizzaPrice(pizza.price, size))}
+            </button>
+          ))
+        )}
+      </div>
     </PizzaStyles>
   );
 }

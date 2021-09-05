@@ -3,6 +3,8 @@ import Img from 'gatsby-image';
 import React from 'react';
 import styled from 'styled-components';
 import SEO from '../components/SEO';
+import calculatePizzaPrice from '../utils/calculatePizzaPrice';
+import formatMoney from '../utils/formatMoney';
 
 const PizzaGrid = styled.div`
   display: grid;
@@ -23,6 +25,17 @@ export default function SinglePizzaPage({ data: { pizza } }) {
               <li key={topping.id}>{topping.name}</li>
             ))}
           </ul>
+          <div>
+            {pizza.entree ? (
+              <button type="button">{formatMoney(pizza.price)} ea</button>
+            ) : (
+              ['S', 'L'].map((size, index) => (
+                <button type="button" key={index}>
+                  {size} {formatMoney(calculatePizzaPrice(pizza.price, size))}
+                </button>
+              ))
+            )}
+          </div>
         </div>
       </PizzaGrid>
     </>
@@ -42,6 +55,8 @@ export const query = graphql`
           }
         }
       }
+      price
+      entree
       toppings {
         name
         id
