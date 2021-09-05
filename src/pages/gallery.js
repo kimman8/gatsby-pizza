@@ -5,7 +5,7 @@ export default function GalleryPage() {
   return (
     <div>
       <SEO title="Gallery" />
-      <h1>Gallery</h1>
+      <h1 className="center">Gallery</h1>
     </div>
   );
 }

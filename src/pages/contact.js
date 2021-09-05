@@ -1,26 +1,29 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { HiOutlinePhone } from 'react-icons/hi';
-import { graphql } from 'gatsby';
-import Img from 'gatsby-image';
 import styled from 'styled-components';
+import WrappedMap from '../components/Map';
 import SEO from '../components/SEO';
 
 export default function ContactPage() {
   const ContactGrid = styled.div`
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    @media (max-width: 600px) {
-      grid-template-columns: repeat(1, 1fr);
-    } ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   `;
-  const ContactStyles = styled.div``;
+  const ContactStyles = styled.div`
+    margin-bottom: 2rem;
+  `;
   const MapStyles = styled.div`
     border: 1px solid var(--grey);
     height: 400px;
+    max-width: 900px;
+    width: 80vw;
   `;
   const PhoneStyles = styled.div`
     display: flex;
     align-items: center;
+    justify-content: center;
     margin-bottom: 1rem;
   `;
   const Phoneh1 = styled.h1`
@@ -36,7 +39,7 @@ export default function ContactPage() {
   return (
     <div>
       <SEO title="Contact Us" />
-      <ContactGrid>
+      <ContactGrid className="center">
         <ContactStyles>
           <PhoneStyles>
             <Phone />
@@ -51,7 +54,14 @@ export default function ContactPage() {
           <h2>Carrum Downs VIC</h2>
           <h2>Shopping Centre Food Court</h2>
         </ContactStyles>
-        <MapStyles>MAP</MapStyles>
+        <MapStyles>
+          <WrappedMap
+            googleMapURL="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=AIzaSyDeBOrS-OEtJaC59Gs91w2fmgyDFEVZZfA"
+            loadingElement={<div style={{ height: '100%' }} />}
+            containerElement={<div style={{ height: '100%' }} />}
+            mapElement={<div style={{ height: '100%' }} />}
+          />
+        </MapStyles>
       </ContactGrid>
     </div>
   );
