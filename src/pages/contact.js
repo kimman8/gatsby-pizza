@@ -1,8 +1,10 @@
-import React from 'react';
-import { HiOutlinePhone } from 'react-icons/hi';
-import styled from 'styled-components';
-import WrappedMap from '../components/Map';
-import SEO from '../components/SEO';
+import React from "react";
+import { HiOutlinePhone } from "react-icons/hi";
+import { FaInstagram } from "react-icons/fa";
+import { GrFacebookOption } from "react-icons/gr";
+import styled from "styled-components";
+import WrappedMap from "../components/Map";
+import SEO from "../components/SEO";
 
 export default function ContactPage() {
   const ContactGrid = styled.div`
@@ -13,6 +15,20 @@ export default function ContactPage() {
   `;
   const ContactStyles = styled.div`
     margin-bottom: 2rem;
+  `;
+
+  const SocialMediaStyles = styled.div`
+    margin-bottom: 1rem;
+  `;
+  const SocialTextStyles = styled.h3`
+    text-align: center;
+  `;
+  const Facebook = styled(GrFacebookOption)`
+    color: red;
+  `;
+
+  const Instagram = styled(FaInstagram)`
+    color: red;
   `;
   const MapStyles = styled.div`
     border: 1px solid var(--grey);
@@ -54,12 +70,19 @@ export default function ContactPage() {
           <h2>Carrum Downs VIC</h2>
           <h2>Shopping Centre Food Court</h2>
         </ContactStyles>
+        <SocialMediaStyles>
+          <SocialTextStyles>
+            Follow us @LuckyStartChinese #LuckyStartChinese
+          </SocialTextStyles>
+          <Instagram />
+          <Facebook />
+        </SocialMediaStyles>
         <MapStyles>
           <WrappedMap
             googleMapURL="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=AIzaSyDeBOrS-OEtJaC59Gs91w2fmgyDFEVZZfA"
-            loadingElement={<div style={{ height: '100%' }} />}
-            containerElement={<div style={{ height: '100%' }} />}
-            mapElement={<div style={{ height: '100%' }} />}
+            loadingElement={<div style={{ height: "100%" }} />}
+            containerElement={<div style={{ height: "100%" }} />}
+            mapElement={<div style={{ height: "100%" }} />}
           />
         </MapStyles>
       </ContactGrid>
