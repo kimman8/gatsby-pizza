@@ -19,11 +19,11 @@ function Map() {
           lat: -38.102102026820255,
           lng: 145.18421758497004,
         }}
-        icon={{
-          url:
-            'https://cdn.iconscout.com/icon/premium/png-256-thumb/dumpling-3194054-2669895.png',
-          scaledSize: new window.google.maps.Size(45, 45),
-        }}
+        // icon={{
+        //   url:
+        //     'https://cdn.iconscout.com/icon/premium/png-256-thumb/dumpling-3194054-2669895.png',
+        //   scaledSize: new window.google.maps.Size(45, 45),
+        // }}
         onClick={() => setSelectPark(!selectPark)}
       />
       {selectPark && (
@@ -33,7 +33,7 @@ function Map() {
             lng: 145.18421758497004,
           }}
         >
-          <h2>We are here! Next to Woolies! 😉</h2>
+          <h2 style={{ padding: '3px' }}>We are here! Next to Woolies! 😉</h2>
         </InfoWindow>
       )}
     </GoogleMap>

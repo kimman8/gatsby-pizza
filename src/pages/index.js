@@ -24,9 +24,9 @@ function HotSlices({ hotSlices }) {
   return (
     <div>
       <h2 className="center">
-        <span className="mark tilt">Hot Slices Available</span>
+        <span className="mark tilt">Here's a small taste of what we do!</span>
       </h2>
-      <p>come on by, buy the slice!</p>
+      <p>come and visit us at the carrum downs shopping centre!</p>
       {!hotSlices && <LoadingGrid count={4} />}
       {hotSlices && !hotSlices?.length && <p>Nothin' in da case!</p>}
       {hotSlices?.length && <ItemGrid items={hotSlices} />}
@@ -41,7 +41,7 @@ export default function HomePage() {
       <h1>The Best Chinese in Carrum Downs</h1>
       <p>Open 10am to 6pm every single day!</p>
       <HomePageGrid>
-        <CurrentlySlicing slicemasters={slicemasters} />
+        {/* <CurrentlySlicing slicemasters={slicemasters} /> */}
         <HotSlices hotSlices={hotSlices} />
       </HomePageGrid>
     </div>

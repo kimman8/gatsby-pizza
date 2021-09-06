@@ -35,6 +35,10 @@ export default function ContactPage() {
     border-radius: 2.5rem;
     margin: 1.25rem;
     cursor: pointer;
+    transition: 0.2s ease-in-out;
+    &:hover {
+      background: var(--red);
+    }
   `;
 
   const Instagram = styled(FaInstagram)`
@@ -45,6 +49,10 @@ export default function ContactPage() {
     border-radius: 2.5rem;
     margin: 1.25rem;
     cursor: pointer;
+    transition: 0.2s ease-in-out;
+    &:hover {
+      background: var(--red);
+    }
   `;
   const MapStyles = styled.div`
     border: 1px solid var(--grey);

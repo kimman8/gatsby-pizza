@@ -3,9 +3,10 @@ import SEO from '../components/SEO';
 
 export default function LunchSpecialPage() {
   return (
-    <div>
+    <div className="center">
       <SEO title="Lunch Specials" />
-      <h1 className="center"> watch this space for Lunch Specials</h1>
+      <h1> Lunch Special is from 11am - 3pm daily!</h1>
+      <h2>Choose up to 3 dishes with half fried rice or noodles</h2>
     </div>
   );
 }
