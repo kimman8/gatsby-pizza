@@ -1,10 +1,11 @@
-import React from "react";
-import { HiOutlinePhone } from "react-icons/hi";
-import { FaInstagram } from "react-icons/fa";
-import { GrFacebookOption } from "react-icons/gr";
-import styled from "styled-components";
-import WrappedMap from "../components/Map";
-import SEO from "../components/SEO";
+import React from 'react';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import { HiOutlinePhone } from 'react-icons/hi';
+import { FaInstagram } from 'react-icons/fa';
+import { GrFacebookOption } from 'react-icons/gr';
+import styled from 'styled-components';
+import WrappedMap from '../components/Map';
+import SEO from '../components/SEO';
 
 export default function ContactPage() {
   const ContactGrid = styled.div`
@@ -20,15 +21,30 @@ export default function ContactPage() {
   const SocialMediaStyles = styled.div`
     margin-bottom: 1rem;
   `;
+  const SocialIconsStyles = styled.div`
+    /* width: 150px; */
+  `;
   const SocialTextStyles = styled.h3`
     text-align: center;
   `;
   const Facebook = styled(GrFacebookOption)`
-    color: red;
+    font-size: 3rem;
+    padding: 1rem;
+    color: var(--white);
+    background: var(--black);
+    border-radius: 2.5rem;
+    margin: 1.25rem;
+    cursor: pointer;
   `;
 
   const Instagram = styled(FaInstagram)`
-    color: red;
+    font-size: 3rem;
+    padding: 1rem;
+    color: var(--white);
+    background: var(--black);
+    border-radius: 2.5rem;
+    margin: 1.25rem;
+    cursor: pointer;
   `;
   const MapStyles = styled.div`
     border: 1px solid var(--grey);
@@ -53,7 +69,7 @@ export default function ContactPage() {
     margin-bottom: 1rem;
   `;
   return (
-    <div>
+    <Router>
       <SEO title="Contact Us" />
       <ContactGrid className="center">
         <ContactStyles>
@@ -74,18 +90,30 @@ export default function ContactPage() {
           <SocialTextStyles>
             Follow us @LuckyStartChinese #LuckyStartChinese
           </SocialTextStyles>
-          <Instagram />
-          <Facebook />
+          <SocialIconsStyles>
+            <a
+              target="_blank"
+              href="https://www.instagram.com/luckystartchinese/"
+            >
+              <Instagram />
+            </a>
+            <a
+              target="_blank"
+              href="https://www.facebook.com/LuckyStartChinese"
+            >
+              <Facebook />
+            </a>
+          </SocialIconsStyles>
         </SocialMediaStyles>
         <MapStyles>
           <WrappedMap
             googleMapURL="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=AIzaSyDeBOrS-OEtJaC59Gs91w2fmgyDFEVZZfA"
-            loadingElement={<div style={{ height: "100%" }} />}
-            containerElement={<div style={{ height: "100%" }} />}
-            mapElement={<div style={{ height: "100%" }} />}
+            loadingElement={<div style={{ height: '100%' }} />}
+            containerElement={<div style={{ height: '100%' }} />}
+            mapElement={<div style={{ height: '100%' }} />}
           />
         </MapStyles>
       </ContactGrid>
-    </div>
+    </Router>
   );
 }
