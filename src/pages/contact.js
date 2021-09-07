@@ -1,11 +1,11 @@
-import React from 'react';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
-import { HiOutlinePhone } from 'react-icons/hi';
-import { FaInstagram } from 'react-icons/fa';
-import { GrFacebookOption } from 'react-icons/gr';
-import styled from 'styled-components';
-import WrappedMap from '../components/Map';
-import SEO from '../components/SEO';
+import React from "react";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { HiOutlinePhone } from "react-icons/hi";
+import { FaInstagram } from "react-icons/fa";
+import { GrFacebookOption } from "react-icons/gr";
+import styled from "styled-components";
+import WrappedMap from "../components/Map";
+import SEO from "../components/SEO";
 
 export default function ContactPage() {
   const ContactGrid = styled.div`
@@ -21,9 +21,7 @@ export default function ContactPage() {
   const SocialMediaStyles = styled.div`
     margin-bottom: 1rem;
   `;
-  const SocialIconsStyles = styled.div`
-    /* width: 150px; */
-  `;
+  const SocialIconsStyles = styled.div``;
   const SocialTextStyles = styled.h3`
     text-align: center;
   `;
@@ -116,9 +114,9 @@ export default function ContactPage() {
         <MapStyles>
           <WrappedMap
             googleMapURL="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=AIzaSyDeBOrS-OEtJaC59Gs91w2fmgyDFEVZZfA"
-            loadingElement={<div style={{ height: '100%' }} />}
-            containerElement={<div style={{ height: '100%' }} />}
-            mapElement={<div style={{ height: '100%' }} />}
+            loadingElement={<div style={{ height: "100%" }} />}
+            containerElement={<div style={{ height: "100%" }} />}
+            mapElement={<div style={{ height: "100%" }} />}
           />
         </MapStyles>
       </ContactGrid>
