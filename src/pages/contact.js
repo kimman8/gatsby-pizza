@@ -1,5 +1,4 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import { HiOutlinePhone } from 'react-icons/hi';
 import { FaInstagram } from 'react-icons/fa';
 import { GrFacebookOption } from 'react-icons/gr';
@@ -21,9 +20,7 @@ export default function ContactPage() {
   const SocialMediaStyles = styled.div`
     margin-bottom: 1rem;
   `;
-  const SocialIconsStyles = styled.div`
-    /* width: 150px; */
-  `;
+  const SocialIconsStyles = styled.div``;
   const SocialTextStyles = styled.h3`
     text-align: center;
   `;
@@ -77,7 +74,7 @@ export default function ContactPage() {
     margin-bottom: 1rem;
   `;
   return (
-    <Router>
+    <div>
       <SEO title="Contact Us" />
       <ContactGrid className="center">
         <ContactStyles>
@@ -122,6 +119,6 @@ export default function ContactPage() {
           />
         </MapStyles>
       </ContactGrid>
-    </Router>
+    </div>
   );
 }

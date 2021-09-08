@@ -94,7 +94,7 @@ const Nav = () => (
         <Link to="/lunch">Lunch Special</Link>
       </li>
       <li>
-        <Link to="/contact">Contact</Link>
+        <Link to="/contact">Contact Us</Link>
       </li>
     </ul>
   </NavStyles>
