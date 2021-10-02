@@ -3,7 +3,7 @@ import Img from 'gatsby-image';
 import React, { useState } from 'react';
 import SEO from '../components/SEO';
 import useForm from '../utils/useForm';
-import calculatePizzaPrice from '../utils/calculatePizzaPrice';
+import calculateMainsPrice from '../utils/calculateMainsPrice';
 import formatMoney from '../utils/formatMoney';
 import OrderStyles from '../styles/OrderStyles';
 import MenuItemStyles from '../styles/MenuItemStyles';
@@ -93,7 +93,7 @@ export default function OrdersPage({ data }) {
                       })
                     }
                   >
-                    {size} {formatMoney(calculatePizzaPrice(pizza.price, size))}
+                    {size} {formatMoney(calculateMainsPrice(pizza.price, size))}
                   </button>
                 ))}
               </div>

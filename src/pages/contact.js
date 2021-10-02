@@ -71,7 +71,7 @@ export default function ContactPage() {
     color: var(--red);
   `;
   const TradingStyles = styled.div`
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
   `;
   return (
     <div>
@@ -83,9 +83,13 @@ export default function ContactPage() {
             <Phoneh1>9782 6668</Phoneh1>
           </PhoneStyles>
           <TradingStyles>
-            <h2>7 DAYS A WEEK</h2>
-            <h2>10AM - 6PM SAT - WED</h2>
-            <h2>10AM - 9PM THURS & FRI</h2>
+            <h2>OPEN EVERY DAY</h2>
+          </TradingStyles>
+          <TradingStyles>
+            <h2>LOCKDOWN HOURS</h2>
+            <h2>10AM - 6PM MON - WED</h2>
+            <h2>10AM - 7PM THURS & FRI</h2>
+            <h2>10AM - 5PM SAT & SUN</h2>
           </TradingStyles>
           <h2>Shop 39, 100 Hall Rd</h2>
           <h2>Carrum Downs VIC</h2>

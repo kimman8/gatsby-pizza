@@ -3,7 +3,8 @@ import Img from 'gatsby-image';
 import React from 'react';
 import styled from 'styled-components';
 import SEO from '../components/SEO';
-import calculatePizzaPrice from '../utils/calculatePizzaPrice';
+import calculateMainsPrice from '../utils/calculateMainsPrice';
+import calculateRiceNoodlePrice from '../utils/calculateRiceNoodlePrice';
 import formatMoney from '../utils/formatMoney';
 
 const PizzaGrid = styled.div`
@@ -27,13 +28,35 @@ export default function SinglePizzaPage({ data: { pizza } }) {
           </ul>
           <div>
             {pizza.entree ? (
-              <button type="button">{formatMoney(pizza.price)} ea</button>
+              <button type="button" style={{ cursor: 'default' }}>
+                {formatMoney(pizza.price)} ea
+              </button>
             ) : (
-              ['S', 'L'].map((size, index) => (
-                <button type="button" key={index}>
-                  {size} {formatMoney(calculatePizzaPrice(pizza.price, size))}
-                </button>
-              ))
+              [
+                pizza.riceOrNoodle
+                  ? ['S', 'L'].map((size, index) => (
+                      <button
+                        type="button"
+                        key={index}
+                        style={{ cursor: 'default' }}
+                      >
+                        {size}{' '}
+                        {formatMoney(
+                          calculateRiceNoodlePrice(pizza.price, size)
+                        )}
+                      </button>
+                    ))
+                  : ['S', 'L'].map((size, index) => (
+                      <button
+                        type="button"
+                        key={index}
+                        style={{ cursor: 'default' }}
+                      >
+                        {size}{' '}
+                        {formatMoney(calculateMainsPrice(pizza.price, size))}
+                      </button>
+                    )),
+              ]
             )}
           </div>
         </div>
@@ -57,6 +80,7 @@ export const query = graphql`
       }
       price
       entree
+      riceOrNoodle
       toppings {
         name
         id

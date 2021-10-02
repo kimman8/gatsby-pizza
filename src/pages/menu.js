@@ -31,6 +31,7 @@ export const query = graphql`
         id
         description
         entree
+        riceOrNoodle
         slug {
           current
         }

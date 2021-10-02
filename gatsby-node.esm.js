@@ -11,6 +11,7 @@ async function turnPizzasIntoPages({ graphql, actions }) {
         nodes {
           name
           description
+          riceOrNoodle
           entree
           slug {
             current

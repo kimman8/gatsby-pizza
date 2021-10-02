@@ -2,7 +2,7 @@ import React from 'react';
 import Img from 'gatsby-image';
 import MenuItemStyles from '../styles/MenuItemStyles';
 import formatMoney from '../utils/formatMoney';
-import calculatePizzaPrice from '../utils/calculatePizzaPrice';
+import calculateMainsPrice from '../utils/calculateMainsPrice';
 
 export default function PizzaOrder({ order, pizzas, removeFromOrder, size }) {
   return (
@@ -14,7 +14,7 @@ export default function PizzaOrder({ order, pizzas, removeFromOrder, size }) {
             <Img fluid={pizza.image.asset.fluid} />
             <h2>{pizza.name}</h2>
             <p>
-              {formatMoney(calculatePizzaPrice(pizza.price, singleOrder.size))}
+              {formatMoney(calculateMainsPrice(pizza.price, singleOrder.size))}
               <button
                 type="button"
                 className="remove"
