@@ -16,7 +16,10 @@ const ImageStyles = styled.div`
   display: grid;
   gap: 3rem;
 `;
-
+const LunchPriceStyles = styled.div`
+  transform: rotate(-2deg);
+  margin-bottom: 2rem;
+`;
 export default function LunchSpecialPage() {
   return (
     <div className="center">
@@ -25,6 +28,14 @@ export default function LunchSpecialPage() {
       <LunchH2Styles>
         Choose up to 3 dishes with half fried rice or noodles
       </LunchH2Styles>
+      <LunchPriceStyles>
+        <button type="button" style={{ cursor: 'default' }}>
+          S $10.90
+        </button>
+        <button type="button" style={{ cursor: 'default' }}>
+          L $11.90
+        </button>
+      </LunchPriceStyles>
       <ImageStyles>
         {/* <img src={lunch} alt="lunch special" /> */}
         <img src={lunchs} alt="lunch special" />
