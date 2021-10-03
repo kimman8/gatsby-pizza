@@ -29,12 +29,8 @@ export default function LunchSpecialPage() {
         Choose up to 3 dishes with half fried rice or noodles
       </LunchH2Styles>
       <LunchPriceStyles>
-        <button type="button" style={{ cursor: 'default' }}>
-          S $10.90
-        </button>
-        <button type="button" style={{ cursor: 'default' }}>
-          L $11.90
-        </button>
+        <button type="button">S $10.90</button>
+        <button type="button">L $11.90</button>
       </LunchPriceStyles>
       <ImageStyles>
         {/* <img src={lunch} alt="lunch special" /> */}

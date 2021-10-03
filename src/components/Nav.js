@@ -63,7 +63,6 @@ const NavStyles = styled.nav`
       justify-items: center;
     }
     .logo-item {
-      background: tomato;
       order: 0;
       grid-column: 1/-1;
     }
@@ -71,7 +70,7 @@ const NavStyles = styled.nav`
       transform: none;
     }
   }
-  @media (max-width: 600px) {
+  @media (max-width: 500px) {
     --columns: 2;
   }
 `;

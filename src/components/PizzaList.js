@@ -33,11 +33,10 @@ const PizzaStyles = styled.div`
 `;
 const PizzaPriceStyles = styled.div`
   cursor: default;
-  transform: rotate(-2deg) translateY(-30px);
+  transform: rotate(-2deg) translateY(480px);
 `;
 
 function SinglePizza({ pizza }) {
-  console.log(pizza);
   return (
     <PizzaStyles>
       <Link to={`/pizza/${pizza.slug.current}`}>
@@ -57,21 +56,13 @@ function SinglePizza({ pizza }) {
           [
             pizza.riceOrNoodle
               ? ['S', 'L'].map((size, index) => (
-                  <button
-                    type="button"
-                    key={index}
-                    style={{ cursor: 'default' }}
-                  >
+                  <button type="button" key={index}>
                     {size}{' '}
                     {formatMoney(calculateRiceNoodlePrice(pizza.price, size))}
                   </button>
                 ))
               : ['S', 'L'].map((size, index) => (
-                  <button
-                    type="button"
-                    key={index}
-                    style={{ cursor: 'default' }}
-                  >
+                  <button type="button" key={index}>
                     {size} {formatMoney(calculateMainsPrice(pizza.price, size))}
                   </button>
                 )),

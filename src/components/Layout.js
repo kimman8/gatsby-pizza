@@ -29,18 +29,18 @@ const ContentStyles = styled.div`
   padding: 2rem;
 `;
 
-const Layout = ({ children }) => (
-  <div>
-    <GlobalStyles />
-    <Typography />
-    <SiteBorderStyles>
-      <ContentStyles>
-        <Nav />
-        {children}
-        <Footer />
-      </ContentStyles>
-    </SiteBorderStyles>
-  </div>
-);
-
-export default Layout;
+export default function Layout({ children }) {
+  return (
+    <>
+      <GlobalStyles />
+      <Typography />
+      <SiteBorderStyles>
+        <ContentStyles>
+          <Nav />
+          {children}
+          <Footer />
+        </ContentStyles>
+      </SiteBorderStyles>
+    </>
+  );
+}
