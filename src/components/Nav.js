@@ -78,15 +78,23 @@ const NavStyles = styled.nav`
 const Nav = () => (
   <NavStyles>
     <ul>
-      <li>{/* <Link to="/gallery">Gallery</Link> */}</li>
-      <li>{/* <Link to="/menu">Menu</Link> */}</li>
+      <li>
+        <Link to="/gallery">Gallery</Link>
+      </li>
+      <li>
+        <Link to="/menu">Menu</Link>
+      </li>
       <li className="logo-item">
         <Link to="/menu">
           <Logo />
         </Link>
       </li>
-      <li>{/* <Link to="/lunch">Lunch Special</Link> */}</li>
-      <li>{/* <Link to="/contact">Contact Us</Link> */}</li>
+      <li>
+        <Link to="/lunch">Lunch Special</Link>
+      </li>
+      <li>
+        <Link to="/contact">Contact Us</Link>
+      </li>
     </ul>
   </NavStyles>
 );

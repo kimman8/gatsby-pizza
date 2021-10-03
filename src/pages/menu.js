@@ -15,7 +15,7 @@ export default function PizzasPage({ data, pageContext }) {
             : `All Meals`
         }
       />
-      {/* <ToppingsFilter activeTopping={pageContext.topping} /> */}
+      <ToppingsFilter activeTopping={pageContext.topping} />
       <PizzaList pizzas={pizzas} />
     </>
   );
