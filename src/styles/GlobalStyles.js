@@ -30,14 +30,14 @@ const GlobalStyles = createGlobalStyle`
     background: var(--red);
     color: white;
     border: 0;
-    padding: 1rem 1.5rem;
+    padding: 1rem;
     border-radius: 2px;
     --cast: 2px;
     box-shadow: var(--cast) var(--cast) 0 var(--grey);
     text-shadow: 0.5px 0.5px 0 rgba(0,0,0,0.2);
     transition: all 0.2s;
     margin-right: 1.2rem;
-    font-size: 2.5rem;
+    font-size: 2rem;
 
     &:hover {
       --cast: 4px;

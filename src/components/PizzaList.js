@@ -10,7 +10,7 @@ const PizzaGridStyles = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 4rem;
-  grid-auto-rows: auto auto 500px;
+  grid-auto-rows: auto auto 300px;
 `;
 
 const PizzaStyles = styled.div`
@@ -32,8 +32,7 @@ const PizzaStyles = styled.div`
   }
 `;
 const PizzaPriceStyles = styled.div`
-  cursor: default;
-  transform: rotate(-2deg) translateY(480px);
+  transform: rotate(-2deg) translateY(-30px);
 `;
 
 function SinglePizza({ pizza }) {
@@ -47,11 +46,9 @@ function SinglePizza({ pizza }) {
       {/* <p>{pizza.toppings.map((topping) => topping.name).join(', ')}</p> */}
       <p>{pizza.description}</p>
       <Img fluid={pizza.image.asset.fluid} alt={pizza.name} />
-      <PizzaPriceStyles>
+      {/* <PizzaPriceStyles>
         {pizza.entree ? (
-          <button type="button" style={{ cursor: 'default' }}>
-            {formatMoney(pizza.price)} ea
-          </button>
+          <button type="button">{formatMoney(pizza.price)} ea</button>
         ) : (
           [
             pizza.riceOrNoodle
@@ -68,7 +65,7 @@ function SinglePizza({ pizza }) {
                 )),
           ]
         )}
-      </PizzaPriceStyles>
+      </PizzaPriceStyles> */}
     </PizzaStyles>
   );
 }
@@ -81,3 +78,5 @@ export default function PizzaList({ pizzas }) {
     </PizzaGridStyles>
   );
 }
+
+// Our crunchy prawn crackers fried in house! Free bag of prawn crackers for all orders over $25!
