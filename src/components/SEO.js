@@ -22,7 +22,9 @@ export default function SEO({ children, location, title, image, description }) {
       <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
       <link rel="alternate icon" href="/favicon.ico" />
       {/* metatags */}
-      <meta name="viewport" content="width=device-width, initial-scale" />
+      {/* <meta name="viewport" content="width=device-width, initial-scale" /> */}
+      {/* the below meta tag fixes the bug i had with responsiveness not working in chrome but wokring in firefox for mobile phones ---need to add initial-scale-1.0 */}
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta charset="utf-8" />
       <meta name="description" content={site.siteMetadata.description} />
       {/* open graph */}
