@@ -11,15 +11,18 @@ const PizzaGridStyles = styled.div`
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 4rem;
   grid-auto-rows: auto auto 500px;
+  @media (max-width: 400px) {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
 `;
 
 const PizzaStyles = styled.div`
   display: grid;
   /*take your template row sizing not from PizzaStyles but from PizzaGridStyles*/
-  /* @supports not (grid-template-rows: subgrid) {
+  @supports not (grid-template-rows: subgrid) {
     --rows: auto auto 1fr;
-  } */
-  /* grid-template-rows: var(--rows, subgrid); */
+  }
+  grid-template-rows: var(--rows, subgrid);
   grid-row: span 3;
   grid-gap: 1rem;
   h2,
@@ -45,26 +48,26 @@ function SinglePizza({ pizza }) {
       {/* <p>{pizza.toppings.map((topping) => topping.name).join(', ')}</p> */}
       <p>{pizza.description}</p>
       <Img fluid={pizza.image.asset.fluid} alt={pizza.name} />
-      {/* <PizzaPriceStyles>
+      <PizzaPriceStyles>
         {pizza.entree ? (
           <button type="button">{formatMoney(pizza.price)} ea</button>
-          ) : (
-            [
-              pizza.riceOrNoodle
+        ) : (
+          [
+            pizza.riceOrNoodle
               ? ['S', 'L'].map((size, index) => (
-                <button type="button" key={index}>
-                {size}{' '}
-                {formatMoney(calculateRiceNoodlePrice(pizza.price, size))}
-                </button>
-                ))
-                : ['S', 'L'].map((size, index) => (
                   <button type="button" key={index}>
-                  {size} {formatMoney(calculateMainsPrice(pizza.price, size))}
+                    {size}{' '}
+                    {formatMoney(calculateRiceNoodlePrice(pizza.price, size))}
                   </button>
-                  )),
-                ]
-                )}
-              </PizzaPriceStyles> */}
+                ))
+              : ['S', 'L'].map((size, index) => (
+                  <button type="button" key={index}>
+                    {size} {formatMoney(calculateMainsPrice(pizza.price, size))}
+                  </button>
+                )),
+          ]
+        )}
+      </PizzaPriceStyles>
     </PizzaStyles>
   );
 }
