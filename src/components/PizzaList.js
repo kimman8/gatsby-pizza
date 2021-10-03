@@ -10,11 +10,10 @@ const PizzaGridStyles = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 4rem;
-  grid-auto-rows: auto auto 300px;
+  grid-auto-rows: auto auto 500px;
 `;
 
 const PizzaStyles = styled.div`
-  position: relative;
   display: grid;
   /*take your template row sizing not from PizzaStyles but from PizzaGridStyles*/
   @supports not (grid-template-rows: subgrid) {
@@ -49,23 +48,23 @@ function SinglePizza({ pizza }) {
       {/* <PizzaPriceStyles>
         {pizza.entree ? (
           <button type="button">{formatMoney(pizza.price)} ea</button>
-        ) : (
-          [
-            pizza.riceOrNoodle
+          ) : (
+            [
+              pizza.riceOrNoodle
               ? ['S', 'L'].map((size, index) => (
-                  <button type="button" key={index}>
-                    {size}{' '}
-                    {formatMoney(calculateRiceNoodlePrice(pizza.price, size))}
-                  </button>
+                <button type="button" key={index}>
+                {size}{' '}
+                {formatMoney(calculateRiceNoodlePrice(pizza.price, size))}
+                </button>
                 ))
-              : ['S', 'L'].map((size, index) => (
+                : ['S', 'L'].map((size, index) => (
                   <button type="button" key={index}>
-                    {size} {formatMoney(calculateMainsPrice(pizza.price, size))}
+                  {size} {formatMoney(calculateMainsPrice(pizza.price, size))}
                   </button>
-                )),
-          ]
-        )}
-      </PizzaPriceStyles> */}
+                  )),
+                ]
+                )}
+              </PizzaPriceStyles> */}
     </PizzaStyles>
   );
 }
@@ -78,5 +77,3 @@ export default function PizzaList({ pizzas }) {
     </PizzaGridStyles>
   );
 }
-
-// Our crunchy prawn crackers fried in house! Free bag of prawn crackers for all orders over $25!

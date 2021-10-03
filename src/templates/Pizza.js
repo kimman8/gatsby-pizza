@@ -9,7 +9,7 @@ import formatMoney from '../utils/formatMoney';
 
 const PizzaGrid = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 2rem;
 `;
 
