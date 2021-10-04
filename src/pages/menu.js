@@ -1,11 +1,24 @@
 import { graphql } from 'gatsby';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import PizzaList from '../components/PizzaList';
 import SEO from '../components/SEO';
 import ToppingsFilter from '../components/ToppingsFilter';
 
 export default function PizzasPage({ data, pageContext }) {
   const pizzas = data.pizzas.nodes;
+  const [toggleFilter, setToggleFilter] = useState(true);
+  useEffect(() => {
+    function handleResize() {
+      if (window.innerWidth < 720) {
+        console.log('we are in mobile now');
+        setToggleFilter(false);
+      } else {
+        setToggleFilter(true);
+      }
+    }
+
+    window.addEventListener('resize', handleResize);
+  }, []);
   return (
     <>
       <SEO
@@ -15,7 +28,16 @@ export default function PizzasPage({ data, pageContext }) {
             : `All Meals`
         }
       />
-      <ToppingsFilter activeTopping={pageContext.topping} />
+
+      <button
+        type="button"
+        style={{ marginBottom: '1rem' }}
+        onClick={() => setToggleFilter(!toggleFilter)}
+      >
+        {toggleFilter ? 'Filter -' : 'Filter +'}
+      </button>
+
+      {toggleFilter && <ToppingsFilter activeTopping={pageContext.topping} />}
       <PizzaList pizzas={pizzas} />
     </>
   );

@@ -8,9 +8,9 @@ dotenv.config({ path: '.env' });
 export default {
   siteMetadata: {
     title: `Lucky Start`,
-    siteUrl: 'https://gatsby.pizza',
+    siteUrl: 'https://luckystart.netlify.app/menu/',
     description: 'The best Chinese in Carrum Downs!',
-    twitter: '@SlicksSlices',
+    twitter: '@LuckyStart',
   },
   plugins: [
     'gatsby-plugin-styled-components',
