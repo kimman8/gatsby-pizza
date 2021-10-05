@@ -7,6 +7,7 @@ export default function GalleryPage() {
     <div>
       <SEO title="Gallery" />
       <h1 className="center">Gallery</h1>
+      <p />
       <img src={LS} alt="" />
     </div>
   );

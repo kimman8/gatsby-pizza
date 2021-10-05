@@ -6,7 +6,7 @@ import ToppingsFilter from '../components/ToppingsFilter';
 
 export default function PizzasPage({ data, pageContext }) {
   const pizzas = data.pizzas.nodes;
-  const [toggleFilter, setToggleFilter] = useState(true);
+  const [toggleFilter, setToggleFilter] = useState(false);
   useEffect(() => {
     function handleResize() {
       if (window.innerWidth < 720) {

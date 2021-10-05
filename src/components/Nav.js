@@ -72,6 +72,8 @@ const NavStyles = styled.nav`
   }
   @media (max-width: 500px) {
     --columns: 2;
+    margin-bottom: 0.5rem;
+    padding-bottom: 0rem;
   }
 `;
 

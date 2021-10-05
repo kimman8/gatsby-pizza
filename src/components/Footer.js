@@ -4,32 +4,33 @@ import { FaInstagram } from 'react-icons/fa';
 import { GrFacebookOption } from 'react-icons/gr';
 
 const Instagram = styled(FaInstagram)`
-  font-size: 1.5rem;
-  padding: 0.5rem;
-  color: var(--white);
-  background: var(--black);
-  border-radius: 2.5rem;
+  font-size: 2.5rem;
+  /* padding: 0.5rem; */
+  color: var(--black);
+  /* background: var(--black); */
+  /* border-radius: 2.5rem; */
   /* margin: 1.25rem; */
+  margin-left: 1rem;
   margin-right: 1rem;
   margin-bottom: -0.5rem;
   cursor: pointer;
   transition: 0.2s ease-in-out;
   &:hover {
-    background: var(--red);
+    color: var(--red);
   }
 `;
 const Facebook = styled(GrFacebookOption)`
-  font-size: 1.5rem;
-  padding: 0.5rem;
-  color: var(--white);
-  background: var(--black);
-  border-radius: 2.5rem;
+  font-size: 2.5rem;
+  /* padding: 0.5rem; */
+  color: var(--black);
+  /* background: var(--black); */
+  /* border-radius: 2.5rem; */
   margin-bottom: -0.5rem;
   /* margin: 1.25rem; */
   cursor: pointer;
   transition: 0.2s ease-in-out;
   &:hover {
-    background: var(--red);
+    color: var(--red);
   }
 `;
 const Footer = () => (

@@ -21,15 +21,15 @@ export default function ContactPage() {
     margin-bottom: 1rem;
   `;
   const SocialIconsStyles = styled.div``;
-  const SocialTextStyles = styled.h3`
-    text-align: center;
+  const SocialTextStyles = styled.p`
+    font-size: clamp(2rem, 2vh, 5rem);
   `;
   const Facebook = styled(GrFacebookOption)`
-    font-size: 3rem;
+    font-size: clamp(2rem, 2vh, 5rem);
     padding: 1rem;
     color: var(--white);
     background: var(--black);
-    border-radius: 2.5rem;
+    border-radius: 50%;
     margin: 1.25rem;
     cursor: pointer;
     transition: 0.2s ease-in-out;
@@ -39,11 +39,11 @@ export default function ContactPage() {
   `;
 
   const Instagram = styled(FaInstagram)`
-    font-size: 3rem;
+    font-size: clamp(2rem, 2vh, 5rem);
     padding: 1rem;
     color: var(--white);
     background: var(--black);
-    border-radius: 2.5rem;
+    border-radius: 50%;
     margin: 1.25rem;
     cursor: pointer;
     transition: 0.2s ease-in-out;
@@ -61,17 +61,18 @@ export default function ContactPage() {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 1rem;
+    /* margin-bottom: 1rem; */
   `;
-  const Phoneh1 = styled.h1`
-    font-size: clamp(3rem, 3vh, 5rem);
+  const ContactTextStyles = styled.p`
+    font-size: clamp(2rem, 2vh, 5rem);
   `;
   const Phone = styled(HiOutlinePhone)`
-    font-size: clamp(3rem, 3vh, 5rem);
+    font-size: clamp(1rem, 2vh, 5rem);
     color: var(--red);
   `;
   const TradingStyles = styled.div`
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
+    border: solid var(--grey) 3px;
   `;
   return (
     <div>
@@ -80,20 +81,22 @@ export default function ContactPage() {
         <ContactStyles>
           <PhoneStyles>
             <Phone />
-            <Phoneh1>9782 6668</Phoneh1>
+            <ContactTextStyles>9782 6668</ContactTextStyles>
           </PhoneStyles>
           <TradingStyles>
-            <h2>OPEN EVERY DAY</h2>
+            <ContactTextStyles>
+              <p>OPEN EVERY DAY</p>
+              <p>LOCKDOWN HOURS</p>
+              <p>10AM - 6PM MON - WED</p>
+              <p>10AM - 7PM THURS & FRI</p>
+              <p>10AM - 5PM SAT & SUN</p>
+            </ContactTextStyles>
           </TradingStyles>
-          <TradingStyles>
-            <h2>LOCKDOWN HOURS</h2>
-            <h2>10AM - 6PM MON - WED</h2>
-            <h2>10AM - 7PM THURS & FRI</h2>
-            <h2>10AM - 5PM SAT & SUN</h2>
-          </TradingStyles>
-          <h2>Shop 39, 100 Hall Rd</h2>
-          <h2>Carrum Downs VIC</h2>
-          <h2>Shopping Centre Food Court</h2>
+          <ContactTextStyles>
+            <p>Shop 39, 100 Hall Rd</p>
+            <p>Carrum Downs VIC</p>
+            <p>Shopping Centre Food Court</p>
+          </ContactTextStyles>
         </ContactStyles>
         <SocialMediaStyles>
           <SocialTextStyles>
