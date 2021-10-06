@@ -38,7 +38,9 @@ const GlobalStyles = createGlobalStyle`
     text-shadow: 0.5px 0.5px 0 rgba(0,0,0,0.2);
     transition: all 0.2s;
     margin-right: 1.2rem;
-    font-size: 2rem;
+    font-size: clamp(1.8rem, 1.5vh, 4rem);
+
+    /* font-size: 2rem; */
 
     &:hover {
       --cast: 4px;

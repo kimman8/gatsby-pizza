@@ -10,6 +10,7 @@ import lunch2s from '../assets/images/lunch5s.jpeg';
 
 const LunchH2Styles = styled.h2`
   margin-bottom: 2rem;
+  font-size: clamp(2rem, 2vh, 5rem);
 `;
 
 const ImageStyles = styled.div`
@@ -19,14 +20,15 @@ const ImageStyles = styled.div`
 const LunchPriceStyles = styled.div`
   transform: rotate(-2deg);
   margin-bottom: 2rem;
+  font-size: clamp(2rem, 2vh, 5rem);
 `;
 export default function LunchSpecialPage() {
   return (
     <div className="center">
       <SEO title="Lunch Specials" />
-      <h1> Lunch Special is from 11am - 3pm daily!</h1>
       <LunchH2Styles>
-        Choose up to 3 dishes with half fried rice or noodles
+        <p> Lunch Special is from 11am - 3pm daily!</p>
+        <p>Choose up to 3 dishes with half fried rice or noodles</p>
       </LunchH2Styles>
       <LunchPriceStyles>
         <button type="button">S $10.90</button>

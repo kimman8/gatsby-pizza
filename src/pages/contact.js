@@ -14,7 +14,7 @@ export default function ContactPage() {
     justify-content: center;
   `;
   const ContactStyles = styled.div`
-    margin-bottom: 2rem;
+    /* margin-bottom: 2rem; */
   `;
 
   const SocialMediaStyles = styled.div`
