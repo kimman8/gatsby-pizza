@@ -1,7 +1,7 @@
 {
-  "name": "slicks-slices-frontend",
+  "name": "lucky-start-frontend",
   "private": true,
-  "description": "Slick Serves the Sweetest Slices",
+  "description": "The best Chinese food in Carrum Downs!",
   "version": "0.1.0",
   "license": "MIT",
   "scripts": {
@@ -16,7 +16,7 @@
   },
   "eslintConfig": {
     "extends": [
-      "wesbos"
+      "kimyuen"
     ],
     "rules": {
       "react/prop-types": 0
@@ -61,6 +61,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/wesbos/slicks-slices"
+    "url": "https://github.com/kimman8/gatsby-pizza"
   }
 }
