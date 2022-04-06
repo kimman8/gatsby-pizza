@@ -86,7 +86,6 @@ export default function ContactPage() {
           <TradingStyles>
             <ContactTextStyles>
               <p>OPEN EVERY DAY</p>
-              <p>LOCKDOWN HOURS</p>
               <p>10AM - 6PM MON - WED</p>
               <p>10AM - 7PM THURS & FRI</p>
               <p>10AM - 5PM SAT & SUN</p>
