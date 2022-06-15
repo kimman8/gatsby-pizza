@@ -24,23 +24,23 @@ const LunchPriceStyles = styled.div`
 `;
 export default function LunchSpecialPage() {
   return (
-    <div className="center">
-      <SEO title="Lunch Specials" />
+    <div className='center'>
+      <SEO title='Lunch Specials' />
       <LunchH2Styles>
         <p> Lunch Special is from 11am - 3pm daily!</p>
         <p>Choose up to 3 dishes with half fried rice or noodles</p>
       </LunchH2Styles>
       <LunchPriceStyles>
-        <button type="button">S $11.40</button>
-        <button type="button">L $12.40</button>
+        <button type='button'>S $11.90</button>
+        <button type='button'>L $12.90</button>
       </LunchPriceStyles>
       <ImageStyles>
         {/* <img src={lunch} alt="lunch special" /> */}
-        <img src={lunchs} alt="lunch special" />
+        <img src={lunchs} alt='lunch special' />
         {/* <img src={lunch1} alt="lunch special" /> */}
-        <img src={lunch1s} alt="lunch special" />
+        <img src={lunch1s} alt='lunch special' />
         {/* <img src={lunch2} alt="lunch special" /> */}
-        <img src={lunch2s} alt="lunch special" />
+        <img src={lunch2s} alt='lunch special' />
       </ImageStyles>
     </div>
   );
