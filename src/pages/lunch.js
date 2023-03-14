@@ -31,8 +31,8 @@ export default function LunchSpecialPage() {
         <p>Choose up to 3 dishes with half fried rice or noodles</p>
       </LunchH2Styles>
       <LunchPriceStyles>
-        <button type='button'>S $11.90</button>
-        <button type='button'>L $12.90</button>
+        <button type='button'>S $12.90</button>
+        <button type='button'>L $13.90</button>
       </LunchPriceStyles>
       <ImageStyles>
         {/* <img src={lunch} alt="lunch special" /> */}
